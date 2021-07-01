@@ -11,4 +11,9 @@ class PokemonController extends Controller
     {
         return view('welcome', ['pokemons' => Pokemon::all()]);
     }
+
+    public function show()
+    {
+        return response()->json(Pokemon::all(), 200);
+    }
 }
