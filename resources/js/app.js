@@ -1,17 +1,15 @@
 require('./bootstrap');
+import { createApp } from 'vue';
+import store from './store/store';
 
-window.Vue = require('vue').default;
-window.Vuex = require('vuex');
+import PokedexNav from "./components/PokedexNav.vue";
+import PokedexContent from "./components/PokedexContent.vue";
+import PokedexFooter from "./components/PokedexFooter.vue";
 
-const PokedexContent = () => import("./components/PokedexContent")
-const PokedexNav = () => import("./components/PokedexNav")
-const PokedexFooter = () => import("./components/PokedexFooter")
-
-const app = new Vue({
-    el: '#app',
+createApp({
     components: {
-        'pokedex-content': PokedexContent,
         'pokedex-nav': PokedexNav,
+        'pokedex-content': PokedexContent,
         'pokedex-footer': PokedexFooter,
     }
-});
+}).use(store).mount('#app')

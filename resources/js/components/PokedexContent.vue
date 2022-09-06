@@ -9,29 +9,33 @@
 </template>
 
 <script>
-import store from "../store/store"
+import { defineComponent, computed, onMounted } from 'vue';
+import { useStore } from 'vuex';
+
 import TheItemData from "./TheItemData";
 import TheSearchBox from "./TheSearchBox";
 
-export default {
+export default defineComponent({
     name: "PokedexContent",
     components: {
         'the-item-data': TheItemData,
         'the-search-box': TheSearchBox,
     },
-    created() {
-        this.$store.dispatch('getPokemonsData')
-    },
-    store,
-    computed: {
-        items: {
-            get () {
-                return this.$store.getters.POKEMONS_WITH_SEARCH_FILTER
-            },
-            set (value) {
-                this.$store.commit('SET_POKEMONS_WITH_SEARCH_FILTER', value)
-            }
-        },
-    },
-}
+    setup() {
+        const store = useStore();
+
+        onMounted(() => {
+            store.dispatch('getPokemonsData');
+        })
+
+        let items = computed(function () {
+            return store.state.pokemonsWithSearchFilter;
+        });
+
+        return {
+            store,
+            items,
+        }
+    }
+})
 </script>
