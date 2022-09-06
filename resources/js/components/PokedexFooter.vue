@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue/dist/vue.esm-bundler';
 
 export default defineComponent({
     name: "PokedexFooter",

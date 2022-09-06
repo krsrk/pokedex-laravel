@@ -12,8 +12,8 @@
 import { defineComponent, computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
 
-import TheItemData from "./TheItemData";
-import TheSearchBox from "./TheSearchBox";
+import TheItemData from "./TheItemData.vue";
+import TheSearchBox from "./TheSearchBox.vue";
 
 export default defineComponent({
     name: "PokedexContent",
