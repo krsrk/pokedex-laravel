@@ -9,7 +9,7 @@ class PokemonController extends Controller
 {
     public function index()
     {
-        return view('welcome', ['pokemons' => Pokemon::all()]);
+        return view('welcome');
     }
 
     public function show()

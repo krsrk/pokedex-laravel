@@ -11,29 +11,31 @@
 </template>
 
 <script>
-export default {
+import { defineComponent, computed, ref } from 'vue';
+import { useStore } from 'vuex';
+
+export default defineComponent({
     name: "TheSearchBox",
-    data () {
+    setup() {
+        //Store
+        const store = useStore();
+
+        //Data
+        let searchInput = ref('');
+
+        //Computed
+        let dataList = computed(function () {
+            return store.state.pokemons;
+        });
+
+        let filterDataList = computed(function () {
+            return store.state.pokemonsWithSearchFilter;
+        })
+
         return {
-            searchInput: ''
-        }
-    },
-    computed: {
-        dataList: {
-            get () {
-                return this.$store.getters.POKEMONS
-            },
-            set (value) {
-                this.$store.commit('SET_POKEMONS', value)
-            }
-        },
-        filterDataList: {
-            get () {
-                return this.$store.getters.POKEMONS_WITH_SEARCH_FILTER
-            },
-            set (value) {
-                this.$store.commit('SET_POKEMONS_WITH_SEARCH_FILTER', value)
-            }
+            searchInput,
+            dataList,
+            filterDataList,
         }
     },
     watch: {
@@ -46,9 +48,11 @@ export default {
     methods: {
         filterListByInputSearch() {
             if (this.searchInput !== '') {
-                let searchDataList = this.filterDataList.filter(pokemon => pokemon.name.toLowerCase().includes(this.searchInput.toLowerCase()))
+                let searchDataList = this.filterDataList.filter(pokemon => pokemon.name.toLowerCase()
+                    .includes(this.searchInput.toLowerCase()))
                 if (searchDataList.length === 1) {
-                    searchDataList = this.dataList.filter(pokemon => pokemon.name.toLowerCase().includes(this.searchInput.toLowerCase()))
+                    searchDataList = this.dataList.filter(pokemon => pokemon.name.toLowerCase()
+                        .includes(this.searchInput.toLowerCase()))
                 }
                 this.$store.commit('SET_POKEMONS_WITH_SEARCH_FILTER', searchDataList)
             } else {
@@ -56,5 +60,5 @@ export default {
             }
         },
     }
-}
+})
 </script>
