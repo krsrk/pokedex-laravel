@@ -1,5 +1,5 @@
-require('./bootstrap');
-import { createApp } from 'vue';
+import './bootstrap';
+import { createApp } from 'vue/dist/vue.esm-bundler';
 import store from './store/store';
 
 import PokedexNav from "./components/PokedexNav.vue";

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { defineComponent, computed, ref } from 'vue';
+import { defineComponent, computed, ref } from 'vue/dist/vue.esm-bundler';
 import { useStore } from 'vuex';
 
 export default defineComponent({
