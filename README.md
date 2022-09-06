@@ -53,6 +53,16 @@ Ejecutamos las migraciones y los seeders:
 sail artisan migrate --seed
 ```
 
+Ejecutamos el server local:
+```
+sail npm run dev
+```
+
+Verificamos en el browser:
+```
+http://localhost:8090
+```
+
 ## License
 
 The Pokedex un proyecto bajo la licencia [MIT license](https://opensource.org/licenses/MIT).
