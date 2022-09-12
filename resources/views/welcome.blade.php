@@ -1,4 +1,4 @@
 @extends('layouts.layout')
 @section('content')
-    <pokedex-content></pokedex-content>
+    <livewire:pokedex-content />
 @endsection

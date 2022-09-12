@@ -10,7 +10,8 @@
         "guzzlehttp/guzzle": "^7.5.0",
         "laravel/framework": "^v9.26.1",
         "laravel/tinker": "^v2.7.2",
-        "laravel/ui": "^3.3"
+        "laravel/ui": "^3.3",
+        "livewire/livewire": "^2.10"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.4.0",
