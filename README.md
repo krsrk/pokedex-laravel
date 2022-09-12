@@ -53,6 +53,11 @@ Ejecutamos las migraciones y los seeders:
 sail artisan migrate --seed
 ```
 
+En el caso de Livewire, solo compilamos los CSS o Tailwind CSS:
+```
+sail npm run dev
+```
+
 ## License
 
 The Pokedex un proyecto bajo la licencia [MIT license](https://opensource.org/licenses/MIT).
