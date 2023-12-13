@@ -5,20 +5,19 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.0||^8.1",
-        "fruitcake/laravel-cors": "^v2.0.5",
-        "guzzlehttp/guzzle": "^7.5.0",
-        "laravel/framework": "^v9.26.1",
-        "laravel/tinker": "^v2.7.2",
-        "laravel/ui": "^3.3"
+        "php": "^8.2||^8.3",
+        "guzzlehttp/guzzle": "^7.8.1",
+        "laravel/framework": "^v10.35.0",
+        "laravel/tinker": "^v2.8.2",
+        "laravel/ui": "^v4.2.3"
     },
     "require-dev": {
-        "spatie/laravel-ignition": "^1.4.0",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^v6.2.1",
-        "phpunit/phpunit": "^9.5.24"
+        "spatie/laravel-ignition": "^2.3.1",
+        "fakerphp/faker": "^v1.9.2",
+        "laravel/sail": "^v1.26.3",
+        "mockery/mockery": "^1.6.7",
+        "nunomaduro/collision": "^v7.10.0",
+        "phpunit/phpunit": "^10.5.3"
     },
     "autoload": {
         "psr-4": {
