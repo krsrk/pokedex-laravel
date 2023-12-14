@@ -1,7 +1,7 @@
 <div>
     <div class="m-5">
         <input
-            wire:model.debounce.250ms="search"
+            wire:model.live.debounce.250ms="search"
             type="search"
             name="query"
             placeholder="Find your Pokemon ..."
