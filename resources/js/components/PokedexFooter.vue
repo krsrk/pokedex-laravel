@@ -6,6 +6,10 @@
                 <div class="sm:w-2/3 text-center py-6">
                     <p class="text-sm text-blue-700 font-bold mb-2">
                         © {{ currentYear }} Pokedex Project by Chris López.
+                        <span class="tracking-wider text-white bg-blue-500 px-4 py-1 text-sm rounded leading-loose mx-2 font-semibold">
+                            Laravel {{ laravelVersion }}
+                        </span>
+
                     </p>
                 </div>
             </div>
@@ -18,12 +22,15 @@ import { defineComponent } from 'vue/dist/vue.esm-bundler';
 
 export default defineComponent({
     name: "PokedexFooter",
-    setup() {
+    props: ['laravelVersion'],
+    setup(props) {
         const currentDate = new Date();
         let currentYear = currentDate.getFullYear()
+        let laravelVersion = props.laravelVersion
 
         return {
-            currentYear
+            currentYear,
+            laravelVersion
         }
     },
 });
