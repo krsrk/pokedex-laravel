@@ -21,7 +21,7 @@
             </div>
 
             <!--- The Footer -->
-            <pokedex-footer></pokedex-footer>
+            <pokedex-footer laravel-version="{{ app()->version() }}"></pokedex-footer>
         </div>
     </body>
 </body>

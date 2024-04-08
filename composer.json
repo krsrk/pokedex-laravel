@@ -7,7 +7,7 @@
     "require": {
         "php": "^8.2||^8.3",
         "guzzlehttp/guzzle": "^7.8.1",
-        "laravel/framework": "^v10.35.0",
+        "laravel/framework": "^v11.2.0",
         "laravel/tinker": "^v2.8.2",
         "laravel/ui": "^v4.2.3"
     },
@@ -16,7 +16,7 @@
         "fakerphp/faker": "^v1.9.2",
         "laravel/sail": "^v1.26.3",
         "mockery/mockery": "^1.6.7",
-        "nunomaduro/collision": "^v7.10.0",
+        "nunomaduro/collision": "^v8.1.1",
         "phpunit/phpunit": "^10.5.3"
     },
     "autoload": {
